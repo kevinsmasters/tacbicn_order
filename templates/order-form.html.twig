@@ -1,0 +1,177 @@
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+
+<div id="startAnOrderForm" class="order_form_bg order_form bv-form content" >
+
+<div id="liveshippinginfo">
+    <h3>Animal Shipment Information / 动物运输信息:</h3>
+
+    <div class="row contact_form" style="padding-bottom:0px">
+	       <div class="half_form" style="border-top:0px;">
+               <div class="input_styling" style="padding-bottom:0px">
+	                  {{ form.deliverydate }}
+	           </div>
+                       {{ form.freq }}
+          </div>
+	      <div class="half_form pull_right" style="border-top:0px;padding-bottom:0px">
+		        <div class="" style="padding-bottom:0px">
+                    {{ form.specialreqs }}
+                </div>
+	      </div>
+      </div>
+</div>
+
+<div id="formSection1" class="nopad">
+
+			<div class="nopad">
+				<div id="section2">
+
+					<!-- end form_description -->
+					<div class="half_form start_order_top nopad">
+						<div id="divmastercustomernumber" class="full_input form-group">
+							{{ form.mastercustomer }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter a Master Customer # / 请输入总客户编号</small>
+								<div class="order-action-link"><a>Don't know Master Customer # / 不知道总客户号?</a></div>
+
+						</div>
+
+						<div id="divinstitution" class="full_input form-group" style="display: none;">
+							{{ form.existinstitution }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter an Institution Name / 请输入机构名称</small>
+							<div class="order-action-link"><a>Back to Master Customer # / 返回主客户编号</a></div>
+						</div>
+
+
+						<div id="divshipaddress" class="full_input form-group">
+							{{ form.shipaddress }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter a Shipping Address # / 请输入送货地址</small>
+								<div class="order-action-link"><a>Don't know Ship to Address # / 不知道寄到地址号码?</a></div>
+						</div>
+						<div id="divshipstreetaddress" style="display: none;">
+							 <div class="full_input form-group">
+                                    {{ form.shipstreetaddress }}
+                                <div class="order-action-link"><a>Back to Ship to Address # / 返回寄送地址</a></div>
+							</div>
+							<div class="full_input form-group">
+								{{ form.shipcity }}
+							</div>
+							<!-- end city_input -->
+							<div class="big_input form-group">
+								{{ form.shipstate }}
+							</div>
+							<!-- end state_input -->
+							<div class="big_input form-group">
+								{{ form.shipzip }}
+							</div>
+							<!-- end zip_input -->
+							<div class="full_input dropdown_select form-group" id="countryWrap" style="border-bottom: 1px solid #dbdbdb;">
+								{{ form.shipcountry }}
+<!-- ... fill select list ... --->
+
+							</div>
+						</div>
+
+
+						<div id="divinvoice" class="full_input form-group">
+							{{ form.invoiceaddress }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter an Invoice Address # / 请输入发票地址</small>
+							<div class="order-action-link"><a>Don't know Invoice Address # / 不知道发票地址号码?</a></div>
+						</div>
+
+						<div id="divinvoiceaddr" style="display: none;">
+							<div class="full_input form-group">
+								{{ form.invoicestreetaddress }}
+								<div class="order-action-link"><a>Back to Invoice Address # / 返回发票地址</a></div>
+							</div>
+							<div class="full_input form-group">
+								{{ form.invoicecity }}
+							</div>
+							<!-- end city_input -->
+							<div class="big_input form-group">
+								{{ form.invoicestate }}
+							</div>
+							<!-- end state_input -->
+							<div class="big_input form-group">
+								{{ form.invoicezip }}
+							</div>
+							<!--- end zip_input -->
+						</div>
+
+						<div class="full_input dropdown_select form-group" id="countryWrap">
+							{{ form.invoicecountry }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter an Invoice Country / 请输入发票国家</small>
+<!-- ... fill select list ... --->
+						</div>
+
+						<div class="full_input form-group" id="divinvestigator">
+
+							{{ form.investigatorname }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter an Investigator Name / 请输入调查员姓名</small>
+						</div>
+
+					</div>
+					<div class="half_form start_order_top pull_right">
+
+						<div class="row form-group nopad">
+							<div class="full_input form-group">
+								{{ form.contactname }}
+							</div>
+						</div>
+						<div class="row form-group nopad" id="divexistingemail">
+							<div class="full_input form-group">
+
+								{{ form.existingemail }}
+                                <small style="display: none;" class="help-block"
+                                >Please enter a Contact Email / 请输入联系人电子邮件</small>
+							</div>
+						</div>
+						<div class="row form-group nopad">
+							<div class="full_input form-group">
+								{{ form.contactphonenumber }}
+							</div>
+						</div>
+						<div class="row form-group nopad">
+							{{ form.paybycard }}
+                            <small style="display: none;" class="help-block"
+                            >Please select / 请选择</small>
+						</div>
+						<div id="cclast4div" class="row form-group nopad" style="display:none;">
+							{{ form.cclast4 }}
+                            <small style="display: none;" class="help-block"
+                            >Please enter last 4 digits of cc # / 请输入信用卡号的后4位数字</small>
+						</div>
+					  <div class="row">
+
+							<div class="full_input form-group">
+								{{ form.existordernumber }}
+							</div>
+							<div class="full_input form-group" style="padding-bottom: 0px;">
+								{{ form.existreleasenumber }}
+							</div>
+						</div>
+					</div>
+					<!-- end half_form -->
+
+				<div class="form_buttons_wrap col-xs-offset-5" style="margin-top: 20px;">
+                    {{ form.actions }}
+
+				</div>
+				</div>
+
+				<!-- end half_form -->
+
+			</div>
+			<!-- end row -->
+
+		</div>
+		<!-- end formSection1 -->
+</div>
+{{ form.orders }}

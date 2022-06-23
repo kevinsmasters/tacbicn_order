@@ -1,0 +1,4 @@
+tacbiocn_order.library:
+  version: 1.x
+  js:
+    js/order-app.js: {}

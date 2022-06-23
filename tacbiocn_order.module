@@ -1,0 +1,19 @@
+<?php
+/*
+ * @file
+ * code for tacbiocn_order module
+*/
+
+/**
+ * Implement hook_theme
+ *
+ */
+ function tacbiocn_order_theme() {
+   return [
+     'order_form' => [
+       'render element' => 'form',
+     ],
+   ];
+ }
+
+?>

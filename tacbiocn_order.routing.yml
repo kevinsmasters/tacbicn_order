@@ -1,0 +1,7 @@
+resume.form:
+ path: '/order'
+ defaults:
+   _title: 'Start an Order / 订购'
+   _form: '\Drupal\tacbiocn_order\Form\OrderForm'
+ requirements:
+   _permission: 'access content'
